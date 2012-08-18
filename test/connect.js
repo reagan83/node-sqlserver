@@ -9,7 +9,8 @@ suite( 'open', function() {
 
     test('trusted connection to a server', function( done ) {
 
-        sql.open( "Driver={SQL Server Native Client 11.0};Server=" + config.server + ";Trusted_Connection={Yes}", 
+//        sql.open( "Driver={SQL Server Native Client 11.0};Initial Catalog=aedb;Server=" + config.server + ";User Id=" + config.user + ";Password=" + config.password + ";", 
+        sql.open( "Driver={SQL Server Native Client 11.0};Initial Catalog=aedb;Server=g360pm2010;UID=aedb;PWD=aedb;", 
                   function( err, conn ) {
 
                       assert.ifError( err );
